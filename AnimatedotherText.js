@@ -24,16 +24,9 @@ const AnimatedText = ({
   )
   const animateOpacity = {
     opacity: animationRange.interpolate({
-      inputRange: [0, 0.9, 1],
-      outputRange: [1, 0, 1]
-    })
-  }
-
-  const otherOpacityText = {
-    opacity: animationRange.interpolate({
-      inputRange: [0, 0.9, 1],
-      outputRange: [1, 0, 0]
-    })
+        inputRange: [0, 0.9, 1],
+        outputRange: [1, 0, 0]
+      })
   }
   return (
     <Animated.Text
@@ -41,20 +34,19 @@ const AnimatedText = ({
       style={[styles.text, animateText, animateOpacity]}
       onLayout={event => onLayoutSetMeasurements(event)}
     >
-      Abdelhalim Ahmed halim
+      React-Native Developer
     </Animated.Text>
   )
 }
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 20,
-    maxWidth: '90%',
+    fontSize: 13,
+    maxWidth: '75%',
     color: '#fff',
-    fontWeight: 'bold',
-    margin: 15,
+    fontWeight: 'normal',
+    marginHorizontal: 15,
     textAlign: 'left',
-    // backgroundColor: 'red',
   }
 })
 
